@@ -1,4 +1,5 @@
 using System.Reflection.Metadata;
+using AutoMapper;
 using WebApi.Common;
 using WebApi.DBOperations;
 
@@ -7,19 +8,18 @@ namespace WebApi.BookOperations.GetBook
     public class GetBookByIdQuery
     {
         private readonly BookStoreDbContext _context;
-        public GetBookByIdQuery(BookStoreDbContext context){
+        private readonly IMapper _mapper;
+        public GetBookByIdQuery(BookStoreDbContext context, IMapper mapper)
+        {
             _context = context;
+            _mapper = mapper;
         }
 
         public GetBookViewModel Handle(int id){
             var book = _context.Books.SingleOrDefault(x=> x.Id == id);
             if(book == null)
                 throw new InvalidOperationException("İlgili kitap bulunamadı!");
-            GetBookViewModel model = new GetBookViewModel();
-            model.Title = book.Title;
-            model.Genre = ((GenreEnum)book.GenreId).ToString();
-            model.PublishDate = book.PublishDate.ToString();
-            model.PageCount = book.PageCount;
+            GetBookViewModel model = _mapper.Map<GetBookViewModel>(book);
 
             return model;
         }

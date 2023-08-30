@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Kodlar\\.Net_c#_Pratik\\BookStore\\WebApi\\WebApi.csproj": {}
+    "F:\\Kodlar\\.NetCore_patika.dev\\BookStore\\WebApi\\WebApi.csproj": {}
   },
   "projects": {
-    "F:\\Kodlar\\.Net_c#_Pratik\\BookStore\\WebApi\\WebApi.csproj": {
+    "F:\\Kodlar\\.NetCore_patika.dev\\BookStore\\WebApi\\WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Kodlar\\.Net_c#_Pratik\\BookStore\\WebApi\\WebApi.csproj",
+        "projectUniqueName": "F:\\Kodlar\\.NetCore_patika.dev\\BookStore\\WebApi\\WebApi.csproj",
         "projectName": "WebApi",
-        "projectPath": "F:\\Kodlar\\.Net_c#_Pratik\\BookStore\\WebApi\\WebApi.csproj",
+        "projectPath": "F:\\Kodlar\\.NetCore_patika.dev\\BookStore\\WebApi\\WebApi.csproj",
         "packagesPath": "C:\\Users\\omer\\.nuget\\packages\\",
-        "outputPath": "F:\\Kodlar\\.Net_c#_Pratik\\BookStore\\WebApi\\obj\\",
+        "outputPath": "F:\\Kodlar\\.NetCore_patika.dev\\BookStore\\WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Program Files\\MicrosoftVisualStudio\\Shared\\NuGetPackages"
@@ -44,6 +44,14 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[7.0.10, )"

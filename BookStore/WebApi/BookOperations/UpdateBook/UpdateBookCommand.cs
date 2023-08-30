@@ -1,3 +1,4 @@
+using AutoMapper;
 using WebApi.DBOperations;
 
 namespace WebApi.BookOperations.UpdateBook
@@ -6,8 +7,11 @@ namespace WebApi.BookOperations.UpdateBook
     {
         public UpdateBookModel model { get; set;}
         private readonly BookStoreDbContext _context;
-        public UpdateBookCommand(BookStoreDbContext context){
+        private readonly IMapper _mapper;
+        public UpdateBookCommand(BookStoreDbContext context, IMapper mapper)
+        {
             _context = context;
+            _mapper = mapper;
         }
 
         public void Handle(int id){
@@ -15,8 +19,9 @@ namespace WebApi.BookOperations.UpdateBook
             if(book == null)
                 throw new InvalidOperationException("Güncellenmek istenen kitap bulunamadı!");
             
-            book.GenreId = model.GenreId != default ? model.GenreId : book.GenreId;
-            book.Title = model.Title != default ? model.Title : book.Title;
+            _mapper.Map(model,book);
+            // book.GenreId = model.GenreId != default ? model.GenreId : book.GenreId;
+            // book.Title = model.Title != default ? model.Title : book.Title;
             
             _context.Update(book);
             _context.SaveChanges();

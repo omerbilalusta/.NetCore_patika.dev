@@ -1,3 +1,4 @@
+using AutoMapper;
 using WebApi.DBOperations;
 
 namespace WebApi.BookOperations.CreateBook
@@ -6,8 +7,11 @@ namespace WebApi.BookOperations.CreateBook
     {
         public CreateBookModel model { get; set;}
         private readonly BookStoreDbContext _context;
-        public CreateBookCommand(BookStoreDbContext context){
+        private readonly IMapper _mapper;
+        public CreateBookCommand(BookStoreDbContext context, IMapper mapper)
+        {
             _context = context;
+            _mapper = mapper;
         }
         public void Handle(){
             var book = _context.Books.SingleOrDefault(x=> x.Title == model.Title);
@@ -16,11 +20,8 @@ namespace WebApi.BookOperations.CreateBook
                 throw new InvalidOperationException("Kitap zaten mevcut!");
             
             book = new Book();
-            book.Title = model.Title;
-            book.PublishDate = model.PublishDate;
-            book.GenreId = model.GenreId;
-            book.PageCount = model.PageCount;
-
+            book = _mapper.Map<Book>(model); // "Book" source, "model" kaynak objeler
+           
             _context.Books.Add(book);
             _context.SaveChanges();
         }
