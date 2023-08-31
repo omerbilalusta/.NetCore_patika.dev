@@ -16,4 +16,8 @@ The repository contains .Net Core education set exercises.
 * Authorization (Token based)
 
 
-.Net Version: 7.0
+## Packages:
+* Microsoft.EntityFrameworkCore : 7.0.10
+* Microsoft.EntityFrameworkCore.InMemory : 7.0.10
+* AutoMapper : 12.0.1
+* AutoMapper.Extensions.Microsoft.DependencyInjection : 12.0.1

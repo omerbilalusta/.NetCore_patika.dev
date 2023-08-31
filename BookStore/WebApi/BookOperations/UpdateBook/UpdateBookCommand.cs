@@ -8,13 +8,14 @@ namespace WebApi.BookOperations.UpdateBook
         public UpdateBookModel model { get; set;}
         private readonly BookStoreDbContext _context;
         private readonly IMapper _mapper;
+        public int id {get; set;}
         public UpdateBookCommand(BookStoreDbContext context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;
         }
 
-        public void Handle(int id){
+        public void Handle(){
             var book = _context.Books.SingleOrDefault(x=> x.Id == id);
             if(book == null)
                 throw new InvalidOperationException("Güncellenmek istenen kitap bulunamadı!");
