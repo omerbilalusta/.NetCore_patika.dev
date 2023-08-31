@@ -1,6 +1,7 @@
 using System.Reflection;
 using Microsoft.EntityFrameworkCore;
 using WebApi.DBOperations;
+using WebApi.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -28,6 +29,8 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+
+app.UseCustomExceptionMiddleware(); // Aldığımız exceptionları hem konsolda hemde cilent'e döndürmek için bu middleware'i yazdık. Böylece controller'da her methhod için Catch exception kısmını yazmamıza gerek kalmadan validate.validateAndThrow metdonun attığı hataları middleware ile yakaladık.
 
 app.MapControllers();
 

@@ -21,3 +21,5 @@ The repository contains .Net Core education set exercises.
 * Microsoft.EntityFrameworkCore.InMemory : 7.0.10
 * AutoMapper : 12.0.1
 * AutoMapper.Extensions.Microsoft.DependencyInjection : 12.0.1
+* FluentValidation : 11.7.1
+* Newtonsoft.Json : 13.0.3

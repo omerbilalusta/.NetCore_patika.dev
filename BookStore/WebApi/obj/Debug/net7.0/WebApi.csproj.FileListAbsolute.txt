@@ -73,3 +73,4 @@ F:\Kodlar\.NetCore_patika.dev\BookStore\WebApi\obj\Debug\net7.0\WebApi.pdb
 F:\Kodlar\.NetCore_patika.dev\BookStore\WebApi\obj\Debug\net7.0\WebApi.genruntimeconfig.cache
 F:\Kodlar\.NetCore_patika.dev\BookStore\WebApi\obj\Debug\net7.0\ref\WebApi.dll
 F:\Kodlar\.NetCore_patika.dev\BookStore\WebApi\bin\Debug\net7.0\FluentValidation.dll
+F:\Kodlar\.NetCore_patika.dev\BookStore\WebApi\bin\Debug\net7.0\Newtonsoft.Json.dll
