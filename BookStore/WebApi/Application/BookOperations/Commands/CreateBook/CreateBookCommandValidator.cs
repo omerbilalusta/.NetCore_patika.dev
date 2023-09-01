@@ -1,6 +1,6 @@
 using FluentValidation;
 
-namespace WebApi.BookOperations.CreateBook
+namespace WebApi.Application.Command.BookOperations.CreateBook
 {
     public class CreateBookCommandValidator : AbstractValidator<CreateBookCommand> // FluentValidation'ı kalıtım olarak almış ve CreateBookCommand sınıfına göre kurallar yazacağımızı söylemiş olduk.
     {

@@ -8,3 +8,5 @@ namespace WebApi.Common
 
     }
 }
+
+//Useless from now (01.09.2023)

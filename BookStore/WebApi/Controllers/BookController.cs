@@ -3,16 +3,16 @@ using FluentValidation;
 using FluentValidation.Results;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
-using WebApi.BookOperations.CreateBook;
-using WebApi.BookOperations.DeleteBook;
-using WebApi.BookOperations.GetBook;
-using WebApi.BookOperations.GetBooks;
-using WebApi.BookOperations.UpdateBook;
+using WebApi.Application.Command.BookOperations.CreateBook;
+using WebApi.Application.Command.BookOperations.DeleteBook;
+using WebApi.Application.Queries.BookOperations.GetBook;
+using WebApi.Application.Queries.BookOperations.GetBooks;
+using WebApi.Application.Command.BookOperations.UpdateBook;
 using WebApi.DBOperations;
-using static WebApi.BookOperations.CreateBook.CreateBookCommand;
-using static WebApi.BookOperations.UpdateBook.UpdateBookCommand;
+using static WebApi.Application.Command.BookOperations.CreateBook.CreateBookCommand;
+using static WebApi.Application.Command.BookOperations.UpdateBook.UpdateBookCommand;
 
-namespace WebApi.AddControllers
+namespace WebApiControllers
 {
     [ApiController]
     [Route("[controller]s")]

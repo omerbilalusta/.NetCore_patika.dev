@@ -2,6 +2,7 @@ using System.Reflection;
 using Microsoft.EntityFrameworkCore;
 using WebApi.DBOperations;
 using WebApi.Middlewares;
+using WebApi.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,7 +17,8 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<BookStoreDbContext>(options => options.UseInMemoryDatabase(databaseName: "BookStoreDB"));
 //Automapper dependency 'sini servis olarak inject etmeliyiz kullanabilmek için. (Dependency Enjection)
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
-
+//Yazdığımız servisleri DI Container'a verdik(doğru bir cümle olmamış olabilir.)
+builder.Services.AddSingleton<ILoggerService, DbLogger>(); // İlk önce hangi sınıftan kalıtım aldığını ardından hangi sınıfın çalışacağını sırayla içeriye verdik.
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

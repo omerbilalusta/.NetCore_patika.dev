@@ -1,9 +1,10 @@
 using System.Reflection.Metadata;
 using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using WebApi.Common;
 using WebApi.DBOperations;
 
-namespace WebApi.BookOperations.GetBook
+namespace WebApi.Application.Queries.BookOperations.GetBook
 {
     public class GetBookByIdQuery
     {
@@ -17,7 +18,7 @@ namespace WebApi.BookOperations.GetBook
         }
 
         public GetBookViewModel Handle(){
-            var book = _context.Books.SingleOrDefault(x=> x.Id == id);
+            var book = _context.Books.Include(x=>x.Genre).Include(x=> x.Author).Where(book => book.Id == id).SingleOrDefault();
             if(book == null)
                 throw new InvalidOperationException("İlgili kitap bulunamadı!");
             GetBookViewModel model = _mapper.Map<GetBookViewModel>(book);
@@ -32,5 +33,6 @@ namespace WebApi.BookOperations.GetBook
         public string Genre { get; set; }
         public int PageCount { get; set; }
         public string PublishDate { get; set; }
+        public string Author { get; set;}
     }
 }

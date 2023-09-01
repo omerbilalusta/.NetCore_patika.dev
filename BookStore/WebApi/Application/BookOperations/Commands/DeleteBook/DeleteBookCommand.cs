@@ -1,7 +1,7 @@
 using AutoMapper;
 using WebApi.DBOperations;
 
-namespace WebApi.BookOperations.DeleteBook
+namespace WebApi.Application.Command.BookOperations.DeleteBook
 {
     public class DeleteBookCommand
     {

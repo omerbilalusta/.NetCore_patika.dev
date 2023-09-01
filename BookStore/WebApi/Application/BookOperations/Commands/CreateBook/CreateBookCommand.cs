@@ -1,7 +1,8 @@
 using AutoMapper;
 using WebApi.DBOperations;
+using WebApi.Entites;
 
-namespace WebApi.BookOperations.CreateBook
+namespace WebApi.Application.Command.BookOperations.CreateBook
 {
     public class CreateBookCommand
     {
@@ -31,6 +32,7 @@ namespace WebApi.BookOperations.CreateBook
             public int GenreId { get; set; }
             public int PageCount { get; set; }
             public DateTime PublishDate { get; set; }
+            public int AuthorId { get; set;}
         }
     }
 }
