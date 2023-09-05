@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Kodlar\\.NetCore_patika.dev\\BookStore\\WebApi\\WebApi.csproj": {}
+    "f:\\Kodlar\\.NetCore_patika.dev\\BookStore\\WebApi\\WebApi.csproj": {}
   },
   "projects": {
-    "F:\\Kodlar\\.NetCore_patika.dev\\BookStore\\WebApi\\WebApi.csproj": {
+    "f:\\Kodlar\\.NetCore_patika.dev\\BookStore\\WebApi\\WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Kodlar\\.NetCore_patika.dev\\BookStore\\WebApi\\WebApi.csproj",
+        "projectUniqueName": "f:\\Kodlar\\.NetCore_patika.dev\\BookStore\\WebApi\\WebApi.csproj",
         "projectName": "WebApi",
-        "projectPath": "F:\\Kodlar\\.NetCore_patika.dev\\BookStore\\WebApi\\WebApi.csproj",
+        "projectPath": "f:\\Kodlar\\.NetCore_patika.dev\\BookStore\\WebApi\\WebApi.csproj",
         "packagesPath": "C:\\Users\\omer\\.nuget\\packages\\",
-        "outputPath": "F:\\Kodlar\\.NetCore_patika.dev\\BookStore\\WebApi\\obj\\",
+        "outputPath": "f:\\Kodlar\\.NetCore_patika.dev\\BookStore\\WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Program Files\\MicrosoftVisualStudio\\Shared\\NuGetPackages"

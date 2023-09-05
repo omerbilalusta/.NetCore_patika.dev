@@ -6,10 +6,10 @@ namespace WebApi.Application.Command.BookOperations.UpdateBook
     public class UpdateBookCommand
     {
         public UpdateBookModel model { get; set;}
-        private readonly BookStoreDbContext _context;
+        private readonly IBookStoreDbContext _context;
         private readonly IMapper _mapper;
         public int id {get; set;}
-        public UpdateBookCommand(BookStoreDbContext context, IMapper mapper)
+        public UpdateBookCommand(IBookStoreDbContext context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;
@@ -24,7 +24,7 @@ namespace WebApi.Application.Command.BookOperations.UpdateBook
             // book.GenreId = model.GenreId != default ? model.GenreId : book.GenreId;
             // book.Title = model.Title != default ? model.Title : book.Title;
             
-            _context.Update(book);
+            _context.Books.Update(book);
             _context.SaveChanges();
         }
 

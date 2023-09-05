@@ -6,9 +6,9 @@ namespace WebApi.Application.AuthorOperations.Commands.DeleteAuthor
     public class DeleteAuthorCommand
     {
         public int Id { get; set; }
-        private readonly BookStoreDbContext _context;
+        private readonly IBookStoreDbContext _context;
 
-        public DeleteAuthorCommand(BookStoreDbContext context)
+        public DeleteAuthorCommand(IBookStoreDbContext context)
         {
             _context = context;
         }
@@ -21,7 +21,7 @@ namespace WebApi.Application.AuthorOperations.Commands.DeleteAuthor
             if(_context.Books.Where(x=> x.AuthorID == Id).Any())
                 throw new InvalidOperationException("Silinmek istenen yazara ait kitap bulunduğu için silinemedi!");
             
-            _context.Remove(author);
+            _context.Authors.Remove(author);
             _context.SaveChanges();
         }
     }

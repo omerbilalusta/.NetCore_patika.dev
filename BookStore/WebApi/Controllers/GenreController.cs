@@ -14,10 +14,10 @@ namespace WebApi.Controllers
     [Route("[controller]s")]
     public class GenreController : ControllerBase
     {
-        private readonly BookStoreDbContext _context;
+        private readonly IBookStoreDbContext _context;
         private readonly IMapper _mapper;
 
-        public GenreController(IMapper mapper, BookStoreDbContext context)
+        public GenreController(IMapper mapper, IBookStoreDbContext context)
         {
             _mapper = mapper;
             _context = context;
@@ -42,7 +42,7 @@ namespace WebApi.Controllers
         }
 
         [HttpPost]
-        public IActionResult AddRenge([FromBody] CreateGenreModel newGenre){
+        public IActionResult AddGenre([FromBody] CreateGenreModel newGenre){
             CreateGenreCommand command = new CreateGenreCommand(_context);
             command.model = newGenre;
 

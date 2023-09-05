@@ -5,11 +5,11 @@ namespace WebApi.Application.Command.BookOperations.DeleteBook
 {
     public class DeleteBookCommand
     {
-        private readonly BookStoreDbContext _context;
+        private readonly IBookStoreDbContext _context;
         private readonly IMapper _mapper;
         public int id {get; set;}
 
-        public DeleteBookCommand(BookStoreDbContext context, IMapper mapper)
+        public DeleteBookCommand(IBookStoreDbContext context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;
@@ -19,7 +19,7 @@ namespace WebApi.Application.Command.BookOperations.DeleteBook
             if(book == null)
                 throw new InvalidOperationException("Silinmek istenen kitap mevcut değil!");
             
-            _context.Remove(book);
+            _context.Books.Remove(book);
             _context.SaveChanges();
         }
     }

@@ -8,17 +8,17 @@ namespace WebApi.Application.Queries.BookOperations.GetBook
 {
     public class GetBookByIdQuery
     {
-        private readonly BookStoreDbContext _context;
+        private readonly IBookStoreDbContext _context;
         private readonly IMapper _mapper;
         public int id {get; set;}
-        public GetBookByIdQuery(BookStoreDbContext context, IMapper mapper)
+        public GetBookByIdQuery(IBookStoreDbContext context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;
         }
 
         public GetBookViewModel Handle(){
-            var book = _context.Books.Include(x=>x.Genre).Include(x=> x.Author).Where(book => book.Id == id).SingleOrDefault();
+            var book = _context.Books.Include(x=>x.Genre).Include(x=> x.Author).Where(book => book.Id == id).FirstOrDefault();
             if(book == null)
                 throw new InvalidOperationException("İlgili kitap bulunamadı!");
             GetBookViewModel model = _mapper.Map<GetBookViewModel>(book);

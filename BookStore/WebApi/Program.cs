@@ -15,6 +15,7 @@ builder.Services.AddSwaggerGen();
 
 //DataGenerator.cs 'de eklediğimiz Database servisini burada enject ettik. (Dependency Enjection)
 builder.Services.AddDbContext<BookStoreDbContext>(options => options.UseInMemoryDatabase(databaseName: "BookStoreDB"));
+builder.Services.AddScoped<IBookStoreDbContext>(provider => provider.GetService<BookStoreDbContext>());
 //Automapper dependency 'sini servis olarak inject etmeliyiz kullanabilmek için. (Dependency Enjection)
 builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 //Yazdığımız servisleri DI Container'a verdik(doğru bir cümle olmamış olabilir.)

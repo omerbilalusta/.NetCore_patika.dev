@@ -43,11 +43,13 @@ F:\Kodlar\.NetCore_patika.dev\BookStore\WebApi\bin\Debug\net7.0\WebApi.dll
 F:\Kodlar\.NetCore_patika.dev\BookStore\WebApi\bin\Debug\net7.0\WebApi.pdb
 F:\Kodlar\.NetCore_patika.dev\BookStore\WebApi\bin\Debug\net7.0\AutoMapper.dll
 F:\Kodlar\.NetCore_patika.dev\BookStore\WebApi\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+F:\Kodlar\.NetCore_patika.dev\BookStore\WebApi\bin\Debug\net7.0\FluentValidation.dll
 F:\Kodlar\.NetCore_patika.dev\BookStore\WebApi\bin\Debug\net7.0\Microsoft.AspNetCore.OpenApi.dll
 F:\Kodlar\.NetCore_patika.dev\BookStore\WebApi\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
 F:\Kodlar\.NetCore_patika.dev\BookStore\WebApi\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
 F:\Kodlar\.NetCore_patika.dev\BookStore\WebApi\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.InMemory.dll
 F:\Kodlar\.NetCore_patika.dev\BookStore\WebApi\bin\Debug\net7.0\Microsoft.OpenApi.dll
+F:\Kodlar\.NetCore_patika.dev\BookStore\WebApi\bin\Debug\net7.0\Newtonsoft.Json.dll
 F:\Kodlar\.NetCore_patika.dev\BookStore\WebApi\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
 F:\Kodlar\.NetCore_patika.dev\BookStore\WebApi\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 F:\Kodlar\.NetCore_patika.dev\BookStore\WebApi\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -72,5 +74,3 @@ F:\Kodlar\.NetCore_patika.dev\BookStore\WebApi\obj\Debug\net7.0\refint\WebApi.dl
 F:\Kodlar\.NetCore_patika.dev\BookStore\WebApi\obj\Debug\net7.0\WebApi.pdb
 F:\Kodlar\.NetCore_patika.dev\BookStore\WebApi\obj\Debug\net7.0\WebApi.genruntimeconfig.cache
 F:\Kodlar\.NetCore_patika.dev\BookStore\WebApi\obj\Debug\net7.0\ref\WebApi.dll
-F:\Kodlar\.NetCore_patika.dev\BookStore\WebApi\bin\Debug\net7.0\FluentValidation.dll
-F:\Kodlar\.NetCore_patika.dev\BookStore\WebApi\bin\Debug\net7.0\Newtonsoft.Json.dll
