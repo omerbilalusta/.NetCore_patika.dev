@@ -14,6 +14,7 @@ The repository contains .Net Core education set exercises.
 * Dependency Injection
 * TDD (Test Driven Development)
 * Authorization (Token based)
+* Final Work (Movie Store)
 
 
 ## Packages:

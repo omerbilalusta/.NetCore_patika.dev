@@ -1,4 +1,4 @@
-//BookStoreDbContext bağımlılığınından (Controller'larda ve bazı başka yerlerde kullanıyorduk) kurtulmak için interface'ini oluşturduk.
+//BookStoreDbContext bağımlılığınından(Controller'larda ve bazı başka yerlerde kullanıyorduk) kurtulmak için interface'ini oluşturduk.
 using Microsoft.EntityFrameworkCore;
 using WebApi.Entites;
 
